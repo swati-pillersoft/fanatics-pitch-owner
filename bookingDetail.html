@@ -1,0 +1,574 @@
+<!-- <div class="container">
+  <div class="top-row">
+    <div class="row">
+      <div class="col-md-12 main-toggle-div">
+        <div
+          class="toggle-btn"
+          data-toggle="collapse"
+          data-target="#dashboard-sidebar"
+          aria-expanded="true"
+          aria-controls="dashboard-sidebar"
+        >
+          <a href="#">
+            <img
+              src="./assets/img/toggle-btn.png"
+              alt="img"
+              class="toggle-img"
+            />
+
+            <span class="dashboard-btn-text"
+              >Booking Details & Manage Timetable</span
+            >
+          </a>
+        </div>
+
+        <div class="search-bar">
+          <div class="icon-bar">
+            <button class="btn btn-booking-toggle active" id="btn-toggle-table">
+              <img src="./assets/img/icon-table.png" alt="" />
+            </button>
+            <button class="btn btn-booking-toggle" id="btn-toggle-calendar">
+              <img src="./assets/img/icon-calendar.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-content-table">
+    <h3 class="page-title">Booking Details</h3>
+    <div class="booking-table-wrapper">
+      <div class="booking-table-header mb-3">
+        <ul class="nav nav-pills" id="bookingTable-pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link active"
+              id="pills-upcoming-tab"
+              data-toggle="pill"
+              href="#pills-upcoming"
+              role="tab"
+              aria-controls="pills-upcoming"
+              aria-selected="true"
+              >Upcoming</a
+            >
+            <div class="arrow-down"></div>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="pills-past-tab"
+              data-toggle="pill"
+              href="#pills-past"
+              role="tab"
+              aria-controls="pills-past"
+              aria-selected="false"
+              >Past</a
+            >
+          </li>
+        </ul>
+        <div class="right-topwrapper">
+          <div class="booking-detail-range">
+            <i class="fas fa-calendar"></i>&nbsp;
+            <input type="text" id="bookingDetailRangePicker" name="datetimes" />
+          </div>
+          <div class="stadium-name booking-detail-stadium">
+            <div class="dropdown">
+              <a
+                class="btn btn-secondary dropdown-toggle custom-dropdown"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Stadium Name
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+                style=""
+              >
+                <a class="dropdown-item" href="#">stadium name1</a>
+                <a class="dropdown-item" href="#">stadium name2</a>
+                <a class="dropdown-item" href="#">stadium name3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content">
+        <div
+          class="tab-pane fade show active"
+          id="pills-upcoming"
+          role="tabpanel"
+          aria-labelledby="pills-upcoming-tab"
+        >
+          <div class="booking-table-body table-responsive">
+            <table
+              class="table dt-responsive nowrap"
+              style="width: 100%"
+              id="bookingTable"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Coach/Organizer<br />/Player Name</th>
+                  <th scope="col">Stadium Name</th>
+                  <th scope="col ">Booking Date <br />and Time</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">
+                    Payment <br />
+                    Mode
+                  </th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Details</th>
+                  <th scope="col">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="booking-tr-1">
+                  <td>Soni</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="booked">Booked</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="cancel"><a href="#">Cancel</a></td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-3">
+                  <td>Rami</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-4">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="booked">Booked</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="cancel"><a href="#">Cancel</a></td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Available</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                  <td class="booknow">
+                    <button id="booknowBtn">Book Now</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-past"
+          role="tabpanel"
+          aria-labelledby="pills-past-tab"
+        >
+          <div class="booking-table-body">
+            <table class="table nowrap" id="bookingTable2">
+              <thead>
+                <tr>
+                  <th scope="col">Coach/Organizer<br />/Player Name</th>
+                  <th scope="col">Stadium Name</th>
+                  <th scope="col ">Booking Date <br />and Time</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">
+                    Payment <br />
+                    Mode
+                  </th>
+                  <th scope="col">Status</th>
+
+                  <th scope="col">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="booking-tr-1">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="booked">Cancelled</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Completed</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+                <tr id="booking-tr-3">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Completed</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+                <tr id="booking-tr-4">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="booked">Cancelled</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Completed</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Completed</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Completed</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+                <tr id="booking-tr-2">
+                  <td>Mathew</td>
+                  <td>Wembley Stadium</td>
+                  <td>Today <br /><small>6:00 PM</small></td>
+                  <td>$ 30</td>
+                  <td>Online</td>
+                  <td class="available">Completed</td>
+                  <td class="view">
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      >View</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-content-calendar">
+    <h3 class="page-title">Manage Timetable</h3>
+  </div>
+</div> -->

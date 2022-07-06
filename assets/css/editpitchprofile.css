@@ -1,0 +1,157 @@
+.stadiumdiv-inputbox {
+  display: flex;
+}
+.stadiumtitle {
+  /* margin-right: 25px; */
+}
+
+.stadium-imgbox {
+  width: 350px;
+  height: 150px;
+  border-radius: 4px;
+}
+
+.editpitchprofile-uploadimg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editpitchprofile-uploadimg-wrapper label {
+  position: relative;
+  cursor: pointer;
+}
+
+#editPitchProfileFileInput {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.editpitchprofile-uploadimg-wrapper .file {
+  display: none;
+}
+
+.editProfile-content-wrapper .form-control {
+  box-shadow: 0 3px 6px 0 rgb(218 218 218 / 60%);
+  border: 0;
+  border-radius: 4px;
+}
+
+.file-upload-text {
+  width: 300px;
+  border: 2px solid #dbdbdb;
+  height: calc(2em + 0.75rem + 2px);
+  position: relative;
+  overflow: hidden;
+  line-height: 30px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.editpitchprofile-uploadimg-wrapper .file-name {
+  font-size: 15px;
+}
+
+.editpitchprofile-uploadimg-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  position: relative;
+  top: 35%;
+}
+
+.editProfile-content-wrapper .form-group {
+  margin-bottom: 3rem;
+}
+
+.editProfile-content-wrapper .form-group:last-child {
+  margin-bottom: 1rem;
+}
+
+.editProfile-top-row {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.editProfile-top-row button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 20px;
+  color: #173a72;
+}
+
+.editProfile-top-row h3 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.editprofile-save-btn,
+.editprofile-save-btn:hover {
+  background: #173a72;
+  padding: 10px 50px;
+  border-radius: 30px;
+  border: 0;
+  color: #fff;
+  display: block;
+  margin: 40px auto;
+}
+
+#stadiumtitle {
+  width: 25%;
+  padding: 12px;
+  height: auto;
+  font-size: 16px;
+  line-height: 1.4;
+  box-shadow: 0 3px 6px 0 rgba(218, 218, 218, 0.6);
+  border: 0;
+}
+#stadiumtitle1 {
+  padding: 12px;
+  height: auto;
+  font-size: 16px;
+  line-height: 1.4;
+  box-shadow: 0 3px 6px 0 rgba(218, 218, 218, 0.6);
+  border: 0;
+}
+.discription-box {
+  padding: 12px;
+  height: auto;
+  font-size: 16px;
+  line-height: 1.4;
+  box-shadow: 0 3px 6px 0 rgba(218, 218, 218, 0.6);
+  border: 0;
+}
+.discriptionbox1 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  #stadiumtitle {
+    width: 100%;
+  }
+
+  .editProfile-content {
+    padding: 20px;
+  }
+
+  .stadium-imgbox {
+    width: 100%;
+  }
+
+  .editpitchprofile-uploadimg-wrapper {
+    margin-left: 0;
+    position: relative;
+    top: 30px;
+  }
+}

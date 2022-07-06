@@ -1,0 +1,487 @@
+.match-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin-bottom: 15px;
+}
+
+.match-card img {
+  width: 8%;
+}
+
+.match-card.detail-card-top {
+  position: relative;
+}
+
+.match-card.detail-card-top .back-btn {
+  position: absolute;
+  right: 10px;
+  border: 1px solid #173a72;
+  color: #173a72;
+  border-radius: 30px;
+  padding: 8px 20px;
+  width: 90px;
+}
+
+.match-card-content {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-outline-matchwidget {
+  border: 1px solid #173a72;
+  color: #173a72;
+  margin-top: 10px;
+  border-radius: 30px;
+  padding: 6px 20px;
+}
+
+.btn-outline-matchwidget:hover {
+  background: #173a72;
+  color: #fff;
+}
+
+.match-card-content p {
+  margin-bottom: 5px;
+}
+
+.matchcard-title {
+  font-size: 20px;
+}
+
+.matchcards-wrapper,
+.matchWidget-details-wrapper {
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background: #fff;
+}
+
+.matchwidget-heading {
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.match-card.detail-card-top {
+  padding: 0;
+  box-shadow: none;
+}
+
+.match-stats-title {
+  background-color: #173a72;
+  color: #fff;
+  padding: 4px 15px;
+  margin: 25px 0;
+  font-size: 17px;
+}
+
+.team-wrapper {
+  background: #e7eefb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player {
+  margin: 0 1%;
+  width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-name {
+  color: #4d4d4d;
+  margin: 10px 0 0 0;
+}
+
+.team-title {
+  font-weight: 600;
+}
+
+.vs-text {
+  text-align: center;
+  font-size: 24px;
+  color: #173a72;
+}
+
+.vs-card {
+  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.team-point {
+  color: #1a1a1a;
+  background: #e7eefb;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.btn-vs-card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border: 1px solid #173a72;
+  font-weight: 600;
+  padding: 6px;
+  margin: 30px 0;
+}
+
+.ft-text {
+  color: #173a72;
+  font-size: 22px;
+}
+
+.vs-card-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.progress {
+  width: 100px;
+  height: 100px !important;
+  float: left;
+  line-height: 100px;
+  background: none;
+  margin: 10px;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  line-height: 100px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress.blue .progress-bar {
+  border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progress.yellow .progress-bar {
+  border-color: #fdba04;
+}
+.progress.yellow .progress-right .progress-bar {
+  animation: loading-3 1.8s linear forwards;
+}
+.progress.yellow .progress-left .progress-bar {
+  animation: none;
+}
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+/* This for loop creates the 	necessary css animation names 
+Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+*/
+.progress[data-percentage="10"] .progress-right .progress-bar {
+  animation: loading-1 1.5s linear forwards;
+}
+
+.progress[data-percentage="10"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="20"] .progress-right .progress-bar {
+  animation: loading-2 1.5s linear forwards;
+}
+
+.progress[data-percentage="20"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="30"] .progress-right .progress-bar {
+  animation: loading-3 1.5s linear forwards;
+}
+
+.progress[data-percentage="30"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="40"] .progress-right .progress-bar {
+  animation: loading-4 1.5s linear forwards;
+}
+
+.progress[data-percentage="40"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="50"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="50"] .progress-left .progress-bar {
+  animation: 0;
+}
+
+.progress[data-percentage="60"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="60"] .progress-left .progress-bar {
+  animation: loading-1 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="70"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="70"] .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="80"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="80"] .progress-left .progress-bar {
+  animation: loading-3 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="90"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="90"] .progress-left .progress-bar {
+  animation: loading-4 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="100"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="100"] .progress-left .progress-bar {
+  animation: loading-5 1.5s linear forwards 1.5s;
+}
+
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(36);
+    transform: rotate(36deg);
+  }
+}
+
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(72);
+    transform: rotate(72deg);
+  }
+}
+
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(108);
+    transform: rotate(108deg);
+  }
+}
+
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(144);
+    transform: rotate(144deg);
+  }
+}
+
+@keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(180);
+    transform: rotate(180deg);
+  }
+}
+
+.matchWidget-details-wrapper {
+  display: none;
+}
+
+.pagination li:first-child a,
+.pagination li:last-child a {
+  border: 0;
+}
+
+.pagination-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination .page-link {
+  color: #173a72;
+}
+
+.pagination .page-item {
+  margin: 0 2px;
+}
+
+.pagination .page-link.active {
+  background: #173a72;
+  color: #fff;
+}
+
+.player-img:hover {
+  transform: scale(1.1);
+}
+
+.player-img {
+  transition: all 0.4s;
+}
+
+.matchWidget-details-wrapper {
+  margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+  .match-card {
+    flex-wrap: wrap;
+  }
+
+  .match-card img {
+    margin: 0px auto 20px auto;
+    width: 100px;
+  }
+
+  .match-card.detail-card-top .back-btn {
+    position: absolute;
+    top: -145px;
+    right: -30px;
+    padding: 5px;
+  }
+
+  .progress {
+    margin: 10px auto;
+    float: none;
+  }
+
+  .ft-text {
+    margin: 30px 0;
+    display: block;
+  }
+
+  .team-point {
+    margin-right: 20px;
+  }
+
+  .matchcards-wrapper,
+  .matchWidget-details-wrapper {
+    padding: 20px 15px;
+  }
+}

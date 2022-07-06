@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+      integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="./assets/css/register.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.css"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.11.0/main.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/hover.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+    <link rel="stylesheet" href="./assets/css/bookingDetail.css" />
+    <link rel="stylesheet" href="./assets/css/manageProfile.css" />
+    <link rel="stylesheet" href="./assets/css/matchWidget.css" />
+    <link rel="stylesheet" href="./assets/css/paymentTracking.css" />
+    <link rel="stylesheet" href="./assets/css/browser-map.css" />
+    <link rel="stylesheet" href="./assets/css/editpitchprofile.css" />
+    <title>Fanatics</title>
+  </head>
+  <body class="no-overflow">
+    <div id="loader">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar navbar-expand navbar-dark fanatic-nav">
+        <a class="navbar-brand" href="./index.html"
+          ><img src="./assets/img/logo-blue.png" alt="PriceUp"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto fenatics-ul">
+            <!--
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#" id="triggerBrowserMap"
+                >Browser Map</a
+              >
+            </li> 
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                id="languageDropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                ><img
+                  src="./assets/img/language-icon.png"
+                  class="translater-icon"
+                />
+              </a>
+              <div
+                class="dropdown-menu custom-dropdown-menu"
+                aria-labelledby="languageDropdownMenuButton"
+              >
+                <span class="dropdown-menu-arrow"></span>
+                <a class="dropdown-item" href="#"
+                  ><span class="flag-icon"
+                    ><img src="./assets/img/united-states.png" alt="" /></span
+                  >English</a
+                >
+                <a class="dropdown-item" href="#"
+                  ><span class="flag-icon"
+                    ><img
+                      src="./assets/img/united-arab-emirates.png"
+                      alt="" /></span
+                  >Arabic</a
+                >
+              </div>
+            </li>-->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img
+                  src="./assets/img/setting.png"
+                  class="setting-icon"
+                  alt="setting"
+                />
+              </a>
+            </li> -->
+
+            <!-- <li>
+              <a href="#" class="nav-link notification-link">
+                <img src="./assets/img/Bell.png" alt="notification bell" />
+                <span class="notification-count">1</span>
+              </a>
+            </li> -->
+            <li
+              class="nav-item dropdown-lg position-relative notification-dropdown"
+            >
+              <a
+                class="nav-link notification-link"
+                data-toggle="dropdown"
+                href="javascript:void();"
+                id="notificationMainDropdownBtn"
+              >
+                <img src="./assets/img/Bell.png" alt="notification bell" />
+                <span class="notification-count">1</span></a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                id="notificationMainDropdown"
+                style="padding: 0.5rem 0 0 0"
+              >
+                <ul class="list-group no-dp list-group-flush">
+                  <li
+                    class="list-group-item noti-header01 d-flex justify-content-between align-items-center"
+                  >
+                    <h6>Notifications</h6>
+                    <!-- <div class="notificationDropdown">
+                      <button
+                        class="btn"
+                        type="button"
+                        id="notificationPopupBtn"
+                      >
+                        <span class="fa fa-ellipsis-v"></span>
+                      </button>
+                      <div id="notificationPopup">
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          id="triggerNotificationTab"
+                          >View All</a
+                        >
+                        <a class="dropdown-item" href="#">Mark all as read</a>
+                      </div>
+                    </div> -->
+                  </li>
+                  <li class="list-group-item">
+                    <a href="javaScript:void();">
+                      <div class="media align-items-center">
+                        <i class="mr-3"
+                          ><img src="assets/img/profile-photo-old.png"
+                        /></i>
+                        <div class="media-body">
+                          <p class="msg-info">
+                            Lorem ipsum dolor sit amet ipsum dolor
+                          </p>
+                          <p>05 May 6:00 PM</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="javaScript:void();">
+                      <div class="media align-items-center">
+                        <i class="mr-3"
+                          ><img src="assets/img/profile-photo-old.png"
+                        /></i>
+                        <div class="media-body">
+                          <p class="msg-info">
+                            Lorem ipsum dolor sit amet ipsum dolor
+                          </p>
+                          <p>05 May 6:00 PM</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="javaScript:void();">
+                      <div class="media align-items-center">
+                        <i class="mr-3"
+                          ><img src="assets/img/profile-photo-old.png"
+                        /></i>
+                        <div class="media-body">
+                          <p class="msg-info">
+                            Lorem ipsum dolor sit amet ipsum dolor
+                          </p>
+                          <p>05 May 6:00 PM</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item dropdown profile-dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="profileDropdownBtn"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./assets/img/profile-photo.png"
+                  class="header-icon"
+                  alt="setting"
+                />
+                <span class="profile-name"
+                  >Ronnie Woodkin <em class="fas fa-chevron-down"></em
+                ></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="profileDropdownBtn">
+                <span class="dropdown-menu-arrow"></span>
+                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="#" id="settingsDropdownBtn"
+                  >Settings</a
+                >
+                <div class="settings-dropdown collapse" id="settingsDropdown">
+                  <a href="#" class="dropdown-item">Change Password</a>
+                  <a href="#" class="dropdown-item"
+                    >Notifications
+                    <!-- Rounded switch -->
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="dashboard-sidebar-overlay"></div>
+      <section class="dashboard-header">
+        <div class="sidebar-wrapper collapse show" id="dashboard-sidebar">
+          <div
+            class="nav flex-column nav-pills"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <a
+              class="nav-link active"
+              id="v-pills-bookingDetail-tab"
+              data-toggle="pill"
+              href="#v-pills-bookingDetail"
+              role="tab"
+              aria-controls="v-pills-bookingDetail"
+              aria-selected="false"
+              ><img
+                src="./assets/img/manage booking.svg"
+                class="sidebar-icon"
+              />Booking Detail & Manage Timetable
+            </a>
+            <a
+              class="nav-link"
+              id="v-pills-dashboard-tab"
+              data-toggle="pill"
+              href="#v-pills-dashboard"
+              role="tab"
+              aria-controls="v-pills-dashboard"
+              aria-selected="true"
+              ><img
+                src="./assets/img/dashboard.svg"
+                class="sidebar-icon"
+              />Dashboard</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-profile-tab"
+              data-toggle="pill"
+              href="#v-pills-profile"
+              role="tab"
+              aria-controls="v-pills-profile"
+              aria-selected="false"
+            >
+              <img
+                src="./assets/img/manage profile.svg"
+                class="sidebar-icon"
+              />Manage Profile
+            </a>
+            <a
+              class="nav-link"
+              id="v-pills-matchWidget-tab"
+              data-toggle="pill"
+              href="#v-pills-matchWidget"
+              role="tab"
+              aria-controls="v-pills-matchWidget"
+              aria-selected="false"
+              ><img
+                src="./assets/img/match widget.svg"
+                class="sidebar-icon"
+              />Match Widget</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-paymentTracking-tab"
+              data-toggle="pill"
+              href="#v-pills-paymentTracking"
+              role="tab"
+              aria-controls="v-pills-paymentTracking"
+              aria-selected="false"
+              ><img
+                src="./assets/img/payment tracking.svg"
+                class="sidebar-icon"
+              />Invoices</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-settings-tab"
+              data-toggle="pill"
+              href="#v-pills-settings"
+              role="tab"
+              aria-controls="v-pills-settings"
+              aria-selected="false"
+              ><img src="./assets/img/help.svg" class="sidebar-icon" />Help
+              Center</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-settings-tab"
+              data-toggle="pill"
+              href="#v-pills-settings"
+              role="tab"
+              aria-controls="v-pills-settings"
+              aria-selected="false"
+              ><img src="./assets/img/FAQ.svg" class="sidebar-icon" />FAQ</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-settings-tab"
+              data-toggle="pill"
+              href="#v-pills-settings"
+              role="tab"
+              aria-controls="v-pills-settings"
+              aria-selected="false"
+              ><img
+                src="./assets/img/terms & policy.svg"
+                class="sidebar-icon"
+              />Terms & Privacy Policy</a
+            >
+            <a
+              class="nav-link d-none"
+              id="v-pills-browsermap-tab"
+              data-toggle="pill"
+              href="#v-pills-browsermap"
+              role="tab"
+              aria-controls="v-pills-browsermap"
+              aria-selected="false"
+              ><img
+                src="./assets/img/payment tracking.svg"
+                class="sidebar-icon"
+              />Browser Map</a
+            >
+          </div>
+        </div>
+        <div class="main-wrapper">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="v-pills-bookingDetail">
+              <div id="bookingDetailDiv">
+                <div class="container">
+                  <div class="top-row">
+                    <div class="row">
+                      <div class="col-md-12 main-toggle-div">
+                        <div
+                          class="toggle-btn"
+                          data-toggle="collapse"
+                          data-target="#dashboard-sidebar"
+                          aria-expanded="true"
+                          aria-controls="dashboard-sidebar"
+                        >
+                          <a href="#">
+                            <img
+                              src="./assets/img/toggle-btn.png"
+                              alt="img"
+                              class="toggle-img"
+                            />
+
+                            <span class="dashboard-btn-text"
+                              >Booking Details & Manage Timetable</span
+                            >
+                          </a>
+                        </div>
+
+                        <div class="search-bar">
+                          <div class="icon-bar">
+                            <button
+                              class="btn btn-booking-toggle active"
+                              id="btn-toggle-table"
+                            >
+                              <img src="./assets/img/icon-table.png" alt="" />
+                            </button>
+                            <button
+                              class="btn btn-booking-toggle"
+                              id="btn-toggle-calendar"
+                            >
+                              <img
+                                src="./assets/img/icon-calendar.png"
+                                alt=""
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-content-table">
+                    <h3 class="page-title">Booking Details</h3>
+                    <div class="booking-table-wrapper">
+                      <div class="booking-table-header mb-3">
+                        <ul
+                          class="nav nav-pills"
+                          id="bookingTable-pills-tab"
+                          role="tablist"
+                        >
+                          <li class="nav-item" role="presentation">
+                            <a
+                              class="nav-link active"
+                              id="pills-upcoming-tab"
+                              data-toggle="pill"
+                              href="#pills-upcoming"
+                              role="tab"
+                              aria-controls="pills-upcoming"
+                              aria-selected="true"
+                              >Upcoming</a
+                            >
+                            <div class="arrow-down"></div>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a
+                              class="nav-link"
+                              id="pills-past-tab"
+                              data-toggle="pill"
+                              href="#pills-past"
+                              role="tab"
+                              aria-controls="pills-past"
+                              aria-selected="false"
+                              >Past</a
+                            >
+                          </li>
+                        </ul>
+                        <div class="right-topwrapper">
+                          <div class="booking-detail-range d-none">
+                            <i class="fas fa-calendar"></i>&nbsp;
+                            <input
+                              type="text"
+                              id="bookingDetailRangePicker"
+                              name="datetimes"
+                            />
+                          </div>
+                          <div class="date-picker mr-2">
+                            <div class="dashboard-date">
+                              <input
+                                type="text"
+                                placeholder="Select Date"
+                                spellcheck="false"
+                                data-ms-editor="true"
+                                class="datepick-input"
+                                id="bookingDetail-datepicker"
+                              />
+                              <img
+                                src="./assets/img/calendar-alt.png"
+                                alt=""
+                                class="datepicker-icon"
+                              />
+                            </div>
+                          </div>
+                          <div class="stadium-name booking-detail-stadium">
+                            <div class="dropdown">
+                              <a
+                                class="btn btn-secondary dropdown-toggle custom-dropdown"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Stadium
+                              </a>
+                              <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton"
+                                style=""
+                              >
+                                <a class="dropdown-item" href="#"
+                                  >stadium name1</a
+                                >
+                                <a class="dropdown-item" href="#"
+                                  >stadium name2</a
+                                >
+                                <a class="dropdown-item" href="#"
+                                  >stadium name3</a
+                                >
+                                <a class="dropdown-item" href="#">All</a>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <a class="see-all-link" href="#">See All</a> -->
+                        </div>
+                      </div>
+                      <div class="tab-content">
+                        <div
+                          class="tab-pane fade show active"
+                          id="pills-upcoming"
+                          role="tabpanel"
+                          aria-labelledby="pills-upcoming-tab"
+                        >
+                          <div class="booking-table-body">
+                            <table
+                              class="table"
+                              id="bookingTable"
+                              style="width: 100%"
+                            >
+                              <thead>
+                                <tr>
+                                  <th scope="col">
+                                    Coach/ Organizer<br />/Player Name
+                                  </th>
+                                  <th scope="col">Stadium Name</th>
+                                  <th scope="col ">
+                                    Booking Date <br />and Time
+                                  </th>
+                                  <th scope="col">Amount</th>
+                                  <th scope="col">
+                                    Payment <br />
+                                    Mode
+                                  </th>
+                                  <th scope="col">Status</th>
+                                  <th scope="col">Details</th>
+                                  <th scope="col">&nbsp;</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr id="booking-tr-1">
+                                  <td>Soni</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="booked">Booked</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="cancel"><a href="#">Cancel</a></td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-3">
+                                  <td>Rami</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-4">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="booked">Booked</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="cancel"><a href="#">Cancel</a></td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Available</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                  <td class="booknow">
+                                    <button id="booknowBtn">Book Now</button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="pills-past"
+                          role="tabpanel"
+                          aria-labelledby="pills-past-tab"
+                        >
+                          <div class="booking-table-body">
+                            <table
+                              class="table"
+                              id="bookingTable2"
+                              style="width: 100%"
+                            >
+                              <thead>
+                                <tr>
+                                  <th scope="col">
+                                    Coach/ Organizer<br />/Player Name
+                                  </th>
+                                  <th scope="col">Stadium Name</th>
+                                  <th scope="col ">
+                                    Booking Date <br />and Time
+                                  </th>
+                                  <th scope="col">Amount</th>
+                                  <th scope="col">
+                                    Payment <br />
+                                    Mode
+                                  </th>
+                                  <th scope="col">Status</th>
+
+                                  <th scope="col">Details</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr id="booking-tr-1">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="booked">Cancelled</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Completed</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-3">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Completed</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-4">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="booked">Cancelled</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Completed</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Completed</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Completed</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                                <tr id="booking-tr-2">
+                                  <td>Mathew</td>
+                                  <td>Wembley Stadium</td>
+                                  <td>Today <br /><small>6:00 PM</small></td>
+                                  <td>$ 30</td>
+                                  <td>Online</td>
+                                  <td class="available">Completed</td>
+                                  <td class="view">
+                                    <a
+                                      href="#"
+                                      data-toggle="modal"
+                                      data-target="#exampleModalCenter"
+                                      >View</a
+                                    >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-content-calendar">
+                    <h3 class="page-title">Manage Timetable</h3>
+                    <div class="timetable-calendar-wrapper">
+                      <div id="timetableCalendar"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="createPitchDiv"></div>
+              <div id="otherBookingDiv"></div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-dashboard">
+              <div class="top-row">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 main-toggle-div">
+                      <div
+                        class="toggle-btn"
+                        data-toggle="collapse"
+                        data-target="#dashboard-sidebar"
+                        aria-expanded="true"
+                        aria-controls="dashboard-sidebar"
+                      >
+                        <a href="#">
+                          <img
+                            src="./assets/img/toggle-btn.png"
+                            alt="img"
+                            class="toggle-img"
+                          />
+
+                          <span class="dashboard-btn-text">Dashboard</span>
+                        </a>
+                      </div>
+
+                      <!-- <div class="search-bar">
+                        <form>
+                          <div class="dashboard-search">
+                            <input
+                              type="text"
+                              placeholder="Search"
+                              spellcheck="false"
+                              data-ms-editor="true"
+                            />
+                            <img
+                              src="./assets/img/search-btn.png"
+                              alt=""
+                              class="search-icon"
+                            />
+                          </div>
+                        </form>
+                      </div> -->
+                      <div class="bottom-header">
+                        <div class="stadium-name">
+                          <div class="dropdown">
+                            <a
+                              class="btn btn-secondary dropdown-toggle custom-dropdown"
+                              type="button"
+                              id="dropdownMenuButton"
+                              data-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Stadium
+                            </a>
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a class="dropdown-item" href="#"
+                                >stadium name1</a
+                              >
+                              <a class="dropdown-item" href="#"
+                                >stadium name2</a
+                              >
+                              <a class="dropdown-item" href="#"
+                                >stadium name3</a
+                              >
+                              <a class="dropdown-item" href="#">All</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="date-picker">
+                          <div class="dashboard-date">
+                            <input
+                              type="text"
+                              placeholder="Select Date"
+                              spellcheck="false"
+                              data-ms-editor="true"
+                              class="datepick-input"
+                              id="stadium-datepicker"
+                            />
+                            <img
+                              src="./assets/img/calendar-alt.png"
+                              alt=""
+                              class="datepicker-icon"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 header-card-group">
+                      <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                          <div class="card dashboard-card">
+                            <div class="card-body dashboard-card-body">
+                              <h5 class="card-title dashboard-card-heading">
+                                Total Revenue
+                              </h5>
+                              <p class="card-text card-number-text">$ 200</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                          <div class="card dashboard-card">
+                            <div class="card-body dashboard-card-body">
+                              <h5 class="card-title dashboard-card-heading">
+                                Total Pitch Posted
+                              </h5>
+                              <p class="card-text card-number-text">100</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                          <div class="card dashboard-card">
+                            <div class="card-body dashboard-card-body">
+                              <h5 class="card-title dashboard-card-heading">
+                                Booked Count
+                              </h5>
+                              <p class="card-text card-number-text">30</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                          <div class="card dashboard-card">
+                            <div class="card-body dashboard-card-body">
+                              <h5 class="card-title dashboard-card-heading">
+                                Visitors Count
+                              </h5>
+                              <p class="card-text card-number-text">100</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-row">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6 mt-4">
+                      <div class="daily-book-wrapper">
+                        <h3>Daily Bookings Over Month</h3>
+                        <div class="dailybook-wrapper">
+                          <canvas
+                            id="dailyBookChart"
+                            width="150"
+                            height="100"
+                          ></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 mt-4">
+                      <div class="hourly-booking-wrapper">
+                        <h3>Hourly Booking Rate</h3>
+                        <div class="hourly-wrapper">
+                          <canvas
+                            id="hourlyBookingChart"
+                            width="150"
+                            height="100"
+                          ></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mt-4">
+                      <div class="booking-cancel-wrapper">
+                        <h3>Booking Cancellation Rates</h3>
+                        <div id="bookingCancelWrapper">
+                          <canvas
+                            id="bookingCancelChart"
+                            width="100"
+                            height="100"
+                          ></canvas>
+                        </div>
+                        <div class="bookingCancelLegend">
+                          <span class="cancelledLegend">Cancelled 20%</span>
+                          <span class="notCancelledLegend"
+                            >Not Cancelled 80%</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-8 mt-4 mb-4 mb-lg-0">
+                      <div class="utilize-wrapper">
+                        <h3>Utilization (<small>No. of Bookings/24</small>)</h3>
+                        <div class="utilization-wrapper">
+                          <canvas
+                            id="utilizationChart"
+                            width="200"
+                            height="100"
+                          ></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile">
+              <div id="manageProfileMainDiv"></div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-matchWidget">
+              <div id="matchWidgetDiv"></div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-paymentTracking">
+              <div id="paymentTrackingDiv"></div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-browsermap">
+              <div id="browserMap"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="bookingViewModalDiv"></div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+      integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <script>
+      // $("#bookingDetailDiv").load("bookingDetail.html");
+      $("#createPitchDiv").load("createPitch.html");
+      $("#manageProfileMainDiv").load("manageProfile.html");
+      $("#matchWidgetDiv").load("matchWidget.html");
+      $("#bookingViewModalDiv").load("bookingViewModal.html");
+      $("#paymentTrackingDiv").load("paymentTracking.html");
+      $("#otherBookingDiv").load("otherBooking.html");
+      $("#browserMap").load("browser-map.html");
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"
+    ></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.11.0/main.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <script src="./assets/js/dashboard.js"></script>
+    <script src="./assets/js/bookingDetail.js"></script>
+    <script src="./assets/js/manageProfile.js"></script>
+    <script src="./assets/js/matchWidget.js"></script>
+    <script src="./assets/js/browser-map.js"></script>
+  </body>
+</html>

@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "Nirmala UI";
+  src: url("../fonts/Nirmala.ttf");
+}
+
+html {
+  scroll-padding-top: 79px;
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Nirmala UI";
+}
+
+.booking-details section {
+  background: #f4f7fc;
+  padding-top: 20px;
+  height: 100vh;
+}
+
+section#step1 {
+  margin-top: 79px;
+}
+
+.venue-para-name-one {
+  font-size: 16px;
+  color: #656565;
+  margin-top: 10px;
+}
+
+.venue-para-name-two {
+  font-size: 18px;
+}
+
+.venue-card-body {
+  min-height: 200px;
+}
+
+.venue-card {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 21px;
+  border: 1px solid #cccccc;
+}
+
+.booking-details .form-control:focus {
+  box-shadow: none;
+}
+
+.custom-indicator {
+  height: 40px;
+  width: 5px;
+  background: #c0c2c5;
+  display: block;
+  margin: 10px 0;
+}
+
+.custom-indicator.current {
+  background: #00508b;
+}
+
+.custom-indicator.completed {
+  background: #99e59f;
+}
+
+.indicator-section {
+  display: flex;
+  align-items: center;
+}
+
+.indicator-right {
+  margin-left: 15px;
+  font-size: 18px;
+  flex: 1;
+}
+
+.bookingdetail-btn-row {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 0.8rem;
+}
+
+.btn-continue {
+  border-radius: 30px;
+  margin-top: 0;
+}
+
+.btn-step-back {
+  width: 90px;
+  border: 1px solid #00508b;
+  border-radius: 30px;
+  background: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.btn-step-back img {
+  width: 15px;
+}
+
+#step4 .venue-form-card {
+  max-height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#step4 input[type="number"]::-webkit-inner-spin-button,
+#step4 input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* width */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f4f7fc;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #00508b;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #013f6b;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #00508b;
+  background-color: #00508b;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
+
+.indicator-section,
+.indicator-section:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+#step4:target .divider,
+#step5:target .divider,
+#step6:target .divider,
+#step7:target .divider,
+#step8:target .divider,
+#step9:target .divider,
+#step10:target .divider,
+#step11:target .divider {
+  position: fixed;
+  top: 110px;
+  bottom: 30px;
+  width: 1px;
+  background: #ccc;
+}
+
+.booking-details .custom-select {
+  background: #fff url(../img/select-arrow.png) no-repeat 95% center / 13px;
+}
+
+.photos-indicator .custom-indicator {
+  height: 100px;
+}
+
+.indicator-right > img {
+  margin-top: 10px;
+}
+
+.booking-details .form-control[readonly] {
+  background: #fff;
+}
+
+.booking-details .form-control[readonly]:focus {
+  border-color: #ced4da;
+}
+
+.currency-box {
+  border: 1px solid #ced4da;
+  background: #fff;
+  padding: 5px;
+  border-radius: 4px 0 0 4px;
+  position: relative;
+  left: 4px;
+}
+
+.venue-card-body {
+  padding: 15px;
+}
+
+#step9 .venue-card-body {
+  min-height: 0;
+}
+
+#step9 .form-row:last-child .form-group {
+  margin-bottom: 0;
+}
+
+.cancellation-tick {
+  width: 25px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.qr-img {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+.qr-card-body {
+  padding: 0 15px;
+  min-height: 0;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.fileupload {
+  width: 200px;
+  height: 200px;
+}
+
+.btn-outline-info {
+  border-color: #00508b;
+  color: #00508b;
+}
+
+.btn-outline-info:hover {
+  background-color: #00508b;
+  border-color: #00508b;
+}
+
+#droparea label {
+  border: 1px dashed #bbb;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  position: relative;
+}
+
+#droparea input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#droparea p {
+  margin-bottom: 8px;
+}
+
+.thumb-row img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  padding: 2px;
+  margin: 7px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  border-radius: 4px;
+}
+
+#droparea {
+  max-height: 40vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#step11 .btn.btn-step-back {
+  width: 160px;
+}

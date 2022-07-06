@@ -1,0 +1,6 @@
+.browser-main-content {
+  margin-top: 25px;
+}
+.browser-main-content .default-card {
+  display: none;
+}

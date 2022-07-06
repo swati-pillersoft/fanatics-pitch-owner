@@ -1,0 +1,183 @@
+<div class="container">
+  <div class="top-row">
+    <div class="row">
+      <div class="col-md-12 main-toggle-div">
+        <div
+          class="toggle-btn"
+          data-toggle="collapse"
+          data-target="#dashboard-sidebar"
+          aria-expanded="true"
+          aria-controls="dashboard-sidebar"
+        >
+          <a href="#">
+            <img
+              src="./assets/img/toggle-btn.png"
+              alt="img"
+              class="toggle-img"
+            />
+
+            <span class="dashboard-btn-text"
+              >Booking Details & Manage Timetable</span
+            >
+          </a>
+        </div>
+
+        <!-- <div class="search-bar">
+          <div class="icon-bar">
+            <button class="btn btn-booking-toggle active" id="btn-toggle-table">
+              <img src="./assets/img/icon-table.png" alt="" />
+            </button>
+            <button class="btn btn-booking-toggle" id="btn-toggle-calendar">
+              <img src="./assets/img/icon-calendar.png" alt="" />
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="pitch-heading-row">
+      <h3 class="page-title">Create Post Pitch</h3>
+      <a href="#" class="btn btn-login back-to-bookDetails">Back</a>
+    </div>
+    <form class="fanatics-sign-form">
+      <div class="register-form">
+        <div class="form-group register-group">
+          <div class="row">
+            <div class="col-md-5">
+              <label for="" class="label-name">Coach Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First Name"
+              />
+            </div>
+            <div class="col-md-5">
+              <label for="" class="label-name label-name-p"></label>
+              <input type="text" class="form-control" placeholder="Last Name" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group register-group">
+          <div class="row">
+            <div class="col-md-5">
+              <label for="" class="label-name">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="abc@domainname.com"
+              />
+            </div>
+
+            <div class="col-md-5">
+              <label for="number" class="label-name">Mobile</label>
+              <input
+                id="number"
+                type="tel"
+                name="number"
+                class="form-control custom-width-pitch"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group register-group">
+          <div class="row">
+            <div class="col-md-5">
+              <label for="slot-date" class="label-name">Available Slots</label>
+              <div class="calendar-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="Select Date"
+                  class="form-control"
+                  id="slot-date"
+                />
+                <img src="./assets/img/icon-calendar-alt.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group register-group">
+          <div class="row">
+            <div class="col-12">
+              <div><label>Available Slots</label></div>
+              <div
+                class="custom-control custom-radio slot-radio custom-control-inline"
+              >
+                <input
+                  type="radio"
+                  id="slotRadio1"
+                  name="customRadioInline1"
+                  class="custom-control-input"
+                  checked
+                />
+                <label class="custom-control-label" for="slotRadio1"
+                  >9 AM - 10 AM</label
+                >
+              </div>
+              <div
+                class="custom-control custom-radio slot-radio custom-control-inline"
+              >
+                <input
+                  type="radio"
+                  id="slotRadio2"
+                  name="customRadioInline1"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="slotRadio2"
+                  >10 AM - 11 AM</label
+                >
+              </div>
+              <div
+                class="custom-control custom-radio slot-radio custom-control-inline"
+              >
+                <input
+                  type="radio"
+                  id="slotRadio3"
+                  name="customRadioInline1"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="slotRadio3"
+                  >11 AM - 12 PM</label
+                >
+              </div>
+              <div
+                class="custom-control custom-radio slot-radio custom-control-inline"
+              >
+                <input
+                  type="radio"
+                  id="slotRadio4"
+                  name="customRadioInline1"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="slotRadio4"
+                  >12 PM - 1 PM</label
+                >
+              </div>
+              <div
+                class="custom-control custom-radio slot-radio custom-control-inline"
+              >
+                <input
+                  type="radio"
+                  id="customRadioInline2"
+                  name="customRadioInline1"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="customRadioInline2"
+                  >1 PM - 2 PM</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group login">
+        <button class="btn btn-login hvr-radial-out pitch-submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,130 @@
+.btn-profilecard {
+  background: #173a72;
+  margin: 20px auto 0 auto;
+  display: block;
+  color: #fff;
+  padding: 8px 30px;
+  font-size: 22px;
+  border-radius: 30px;
+}
+#profileCardBtn:hover {
+  color: #fff;
+}
+.profileComplete-content-wrapper {
+  display: none;
+}
+
+.btn-profilecard.hvr-radial-out::before {
+  background: #dbb20d;
+  border-radius: 30px;
+}
+.manage-card {
+  border: 0;
+  box-shadow: 0 3px 6px 0 rgba(218, 218, 218, 0.6);
+  border-radius: 0;
+  padding: 18px 0px;
+}
+.manage-card-title {
+  font-size: 20px;
+  margin-top: -1.5rem;
+  font-weight: 300;
+}
+.map-text {
+  font-weight: 300;
+  color: #4d4d4d;
+  margin-bottom: 0;
+}
+.map-text em {
+  color: #4d4d4d;
+}
+.follower-para {
+  font-size: 16px;
+  color: #4d4d4d;
+  font-weight: 300;
+}
+.card-img-1 {
+  box-shadow: 0 3px 6px 0 rgba(218, 218, 218, 0.6);
+  border-radius: 10px;
+}
+.profileComplete-content-wrapper {
+  border: 0;
+  box-shadow: 0 3px 6px 0 rgba(218, 218, 218, 0.6);
+  border-radius: 0;
+  padding: 40px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.editProfile-content {
+  box-shadow: 0 3px 6px #173a72;
+  border-radius: 5px;
+  background: #fff;
+  padding: 20px 60px 20px 20px;
+  border: 0;
+}
+
+.manageProfilemain-content-wrapper,
+.profileComplete-content-wrapper,
+.editProfile-content {
+  margin-top: 20px;
+}
+
+.card-title {
+  text-align: left;
+}
+.btn-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-profile {
+  background: #173a72;
+  margin: 10px;
+  padding: 8px 25px;
+  border-radius: 30px;
+  color: #fff;
+}
+.btn-profile:hover {
+  color: #fff;
+}
+.btn-profile.hvr-radial-out::before {
+  background: rgb(219, 178, 13);
+  border-radius: 30px;
+}
+.manage-details-img {
+  border-radius: 10px;
+  height: 340px;
+  width: 100%;
+}
+.completeProfile-content {
+  padding: 30px 0px;
+}
+.completeProfile-para {
+  font-size: 18px;
+  font-weight: 500;
+}
+.completeprofile-text {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  position: relative;
+  left: 12px;
+}
+.bold-tite {
+  font-size: 18px;
+}
+
+.editProfile-content-wrapper {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .profileComplete-content-wrapper {
+    padding: 40px 15px;
+  }
+
+  .btn-row {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+  }
+}

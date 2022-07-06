@@ -1,0 +1,83 @@
+.custom-indicator {
+  height: 40px;
+  width: 5px;
+  background: #c0c2c5;
+  display: block;
+  margin: 10px 0;
+}
+
+.custom-indicator.current {
+  background: #00508b;
+}
+
+.custom-indicator.completed {
+  background: #99e59f;
+}
+
+.indicator-section {
+  display: flex;
+  align-items: center;
+}
+
+.indicator-right {
+  margin-left: 15px;
+  font-size: 18px;
+  flex: 1;
+}
+
+.divider {
+  position: fixed;
+  top: 110px;
+  bottom: 30px;
+  width: 1px;
+  background: #ccc;
+}
+/* 
+.main-wrapper,
+.sidebar-wrapper {
+  min-height: 100vh;
+  padding-top: 79px;
+}
+
+.sidebar-wrapper .nav-pills .nav-link {
+  margin-top: -10vh;
+}
+
+.sidebar-wrapper.collapse {
+  display: flex;
+  align-items: center;
+} */
+
+.manage-card {
+  border: 0;
+  border-radius: 0;
+  margin: 15px 0;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+.manage-card .card-body {
+  padding: 18px;
+}
+
+.manageprofile-card-img {
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+.manage-card-title {
+  font-size: 18px;
+}
+.map-text {
+  margin: 10px 0 20px 0;
+  color: #707070;
+}
+
+.manage-card .progress {
+  height: 6px;
+  flex: 1;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/hover.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/signin.css" />
+    <title>Sign In | Fanatics</title>
+  </head>
+  <body class="signinpage">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 px-0">
+          <img
+            src="./assets/img/signin-left-img.png"
+            alt=""
+            class="signin-left-img"
+          />
+          <!-- <div class="left-wrapper">
+            <img
+              src="./assets/img/signin-top.png"
+              alt="sd"
+              class="signin-left-top-pattern"
+            />
+
+            <a href="./index.html" class="d-block"
+              ><img
+                src="./assets/img/signin-logo.png"
+                alt="sd"
+                class="signin-left-logo"
+            /></a>
+
+            <img
+              src="./assets/img/signin-bottom.png"
+              alt="sd"
+              class="signin-left-bottom-pattern"
+            />
+          </div> -->
+        </div>
+        <div class="col-lg-6 px-0">
+          <div class="right-wrapper">
+            <h1 class="signin-title">Sign In As Pitch Owner</h1>
+            <form class="fanatics-sign-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email / Mobile"
+                />
+              </div>
+
+              <div class="form-group password-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  id="txtPassword"
+                />
+                <span id="toggle_pwd" class="fas fa-eye"></span>
+              </div>
+              <a href="./forgotPassword.html" class="forgotpassword-text"
+                >Forgot Password?</a
+              >
+              <div class="form-group login">
+                <a class="btn btn-login hvr-radial-out" href="./dashboard.html">
+                  LOGIN
+                </a>
+              </div>
+            </form>
+            <div class="form-group extra-margin">OR</div>
+            <div class="form-group text-center">
+              <a href="#" class="signin-icon fb-icon">
+                <img src="./assets/img/fb-icon.png" alt="fb" />
+              </a>
+              <a href="#" class="signin-icon google-icon">
+                <img src="./assets/img/google-icon.png" alt="google" />
+              </a>
+            </div>
+            <p class="user-text">
+              New User?
+              <a href="./register.html" class="createaccount-link"
+                >Create an Account</a
+              >
+            </p>
+            <p class="terms-para">Terms and Conditions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      $(function () {
+        $("#toggle_pwd").click(function () {
+          $(this).toggleClass("fa-eye fa-eye-slash");
+          var type = $(this).hasClass("fa-eye-slash") ? "text" : "password";
+          $("#txtPassword").attr("type", type);
+        });
+      });
+    </script>
+  </body>
+</html>

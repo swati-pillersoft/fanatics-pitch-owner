@@ -1,0 +1,46 @@
+.verify-title {
+  font-size: 24px;
+  text-align: left;
+  font-weight: 300;
+  color: #4d4d4d;
+  margin-bottom: 22px;
+}
+.verify-para {
+  text-align: left;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 100;
+  margin-bottom: 40px;
+}
+.verification-box {
+  margin-top: 35px;
+}
+.send-mail-text {
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: #04508b;
+  text-decoration: none;
+}
+.opt-para {
+  font-size: 14px;
+  font-weight: 100;
+  text-align: left;
+  margin-left: 5px;
+}
+.verify-btn {
+  margin-top: 80px;
+  width: 65% !important;
+  text-transform: uppercase;
+  background: #173a72;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 30px;
+}
+.verify-btn.hvr-radial-out:before {
+  background: #dbb20d;
+}
+.verify-btn:hover {
+  border-color: #dbb20d;
+}

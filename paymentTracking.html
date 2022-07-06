@@ -1,0 +1,113 @@
+<div class="container">
+  <div class="top-row">
+    <div class="row">
+      <div class="col-md-12 main-toggle-div">
+        <div
+          class="toggle-btn"
+          data-toggle="collapse"
+          data-target="#dashboard-sidebar"
+          aria-expanded="true"
+          aria-controls="dashboard-sidebar"
+        >
+          <a href="#">
+            <img
+              src="./assets/img/toggle-btn.png"
+              alt="img"
+              class="toggle-img"
+            />
+
+            <span class="dashboard-btn-text">Invoices</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="payment-main-content">
+    <h3 class="payment-page-title">Payment Management</h3>
+    <div class="payment-content-wrapper">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group form-group-inline">
+              <label for="coach">Coach/Organizer/Player Name</label>
+              <select id="coach" class="form-control">
+                <option value="" disabled hidden selected>Select Name</option>
+                <option value="Matthew">Matthew</option>
+                <option value="Rose">Rose</option>
+                <option value="Amit">Amit</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group form-group-inline">
+              <label for="stadium">Stadium Name</label>
+              <select id="stadium" class="form-control">
+                <option value="" disabled hidden selected>
+                  Select Stadium
+                </option>
+                <option value="Matthew">Eden Garden</option>
+                <option value="Rose">Stadium 2</option>
+                <option value="Amit">Stadium 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group form-group-inline">
+              <label for="amount">Amount</label>
+              <input type="text" class="form-control" id="amount" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group form-group-inline">
+              <label for="status">Status</label>
+              <input type="text" class="form-control" id="status" />
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-payment-track hvr-radial-out">
+              Get Details
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-12 payment-result-title">
+          Payment / Invoice Breakdown
+        </div>
+        <div class="col-12">
+          <div class="table-responsive">
+            <table class="table payment-result-table">
+              <thead>
+                <th>No.</th>
+                <th>Created</th>
+                <th>Due</th>
+                <th>Paid</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Tax</th>
+                <th>Total</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>88</td>
+                  <td>28/04/2022</td>
+                  <td>28/04/2022</td>
+                  <td>28/04/2022</td>
+                  <td>Online</td>
+                  <td>$30.00</td>
+                  <td>$0.00</td>
+                  <td>$30.00</td>
+                  <td class="payment-detail-last-td">
+                    <span class="payment-detail-inn">Invoice</span>
+                    <span class="payment-result-del">Delete</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
