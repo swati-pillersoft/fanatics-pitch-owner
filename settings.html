@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+    <link rel="stylesheet" href="./assets/css/settings.css" />
+    <title>Settings | Fanatics</title>
+  </head>
+  <body class="no-overflow">
+    <div id="loader">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar navbar-expand navbar-dark fanatic-nav">
+        <a class="navbar-brand" href="./index.html"
+          ><img src="./assets/img/logo-blue.png" alt="PriceUp"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto fenatics-ul">
+            <li
+              class="nav-item dropdown-lg position-relative notification-dropdown"
+            >
+              <a
+                class="nav-link notification-link"
+                data-toggle="dropdown"
+                href="javascript:void();"
+                id="notificationMainDropdownBtn"
+              >
+                <img src="./assets/img/Bell.png" alt="notification bell" />
+                <span class="notification-count">1</span></a
+              >
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                id="notificationMainDropdown"
+                style="padding: 0.5rem 0 0 0"
+              >
+                <ul class="list-group no-dp list-group-flush">
+                  <li
+                    class="list-group-item noti-header01 d-flex justify-content-between align-items-center"
+                  >
+                    <h6>Notifications</h6>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="javaScript:void();">
+                      <div class="media align-items-center">
+                        <i class="mr-3"
+                          ><img src="assets/img/profile-photo-old.png"
+                        /></i>
+                        <div class="media-body">
+                          <p class="msg-info">
+                            Lorem ipsum dolor sit amet ipsum dolor
+                          </p>
+                          <p>05 May 6:00 PM</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="javaScript:void();">
+                      <div class="media align-items-center">
+                        <i class="mr-3"
+                          ><img src="assets/img/profile-photo-old.png"
+                        /></i>
+                        <div class="media-body">
+                          <p class="msg-info">
+                            Lorem ipsum dolor sit amet ipsum dolor
+                          </p>
+                          <p>05 May 6:00 PM</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="javaScript:void();">
+                      <div class="media align-items-center">
+                        <i class="mr-3"
+                          ><img src="assets/img/profile-photo-old.png"
+                        /></i>
+                        <div class="media-body">
+                          <p class="msg-info">
+                            Lorem ipsum dolor sit amet ipsum dolor
+                          </p>
+                          <p>05 May 6:00 PM</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item dropdown profile-dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="profileDropdownBtn"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./assets/img/profile-photo.png"
+                  class="header-icon"
+                  alt="setting"
+                />
+                <span class="profile-name"
+                  >Ronnie Woodkin <em class="fas fa-chevron-down"></em
+                ></span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="profileDropdownBtn">
+                <span class="dropdown-menu-arrow"></span>
+                <a class="dropdown-item" href="./booking-detail.html">Home</a>
+
+                <a class="dropdown-item" href="./settings.html">Setting</a>
+                <a class="dropdown-item" href="./signin.html">Logout</a>
+
+                <!--<a class="dropdown-item" href="#" id="settingsDropdownBtn"
+                  >Settings</a
+                >
+                 <div class="settings-dropdown collapse" id="settingsDropdown">
+                  <a href="#" class="dropdown-item">Change Password</a>
+                  <a href="#" class="dropdown-item"
+                    >Notifications
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                  </a>
+                </div> -->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="dashboard-sidebar-overlay"></div>
+      <section class="dashboard-header">
+        <div class="sidebar-wrapper collapse show" id="dashboard-sidebar">
+          <div
+            class="nav flex-column nav-pills"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <a
+              class="nav-link active"
+              id="v-pills-personalinfo-tab"
+              data-toggle="pill"
+              href="#v-pills-personalinfo"
+              role="tab"
+              aria-controls="v-pills-personalinfo"
+              aria-selected="false"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="18.75"
+                viewBox="0 0 25 18.75"
+              >
+                <path
+                  id="Path_1834"
+                  data-name="Path 1834"
+                  d="M1.563,23.25A1.53,1.53,0,0,1,0,21.688c0-1.562,1.563-6.25,9.375-6.25s9.375,4.688,9.375,6.25a1.53,1.53,0,0,1-1.562,1.563Zm7.813-9.375A4.687,4.687,0,1,0,4.688,9.188,4.687,4.687,0,0,0,9.375,13.875Zm10.938,2.344a.781.781,0,0,1,.781-.781h3.125a.781.781,0,0,1,0,1.563H21.094A.781.781,0,0,1,20.313,16.219Zm-3.125-4.687a.781.781,0,0,1,.781-.781h6.25a.781.781,0,0,1,0,1.563h-6.25A.781.781,0,0,1,17.188,11.531Zm0-4.687a.781.781,0,0,1,.781-.781h6.25a.781.781,0,0,1,0,1.563h-6.25A.781.781,0,0,1,17.188,6.844Zm3.125,14.063a.781.781,0,0,1,.781-.781h3.125a.781.781,0,0,1,0,1.563H21.094A.781.781,0,0,1,20.313,20.906Z"
+                  transform="translate(0 -4.5)"
+                  fill="#1f75e8"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              Personal Info
+            </a>
+
+            <a
+              class="nav-link"
+              id="v-pills-security-tab"
+              data-toggle="pill"
+              href="#v-pills-security"
+              role="tab"
+              aria-controls="v-pills-security"
+              aria-selected="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="24.479"
+                viewBox="0 0 20 24.479"
+              >
+                <path
+                  id="shield-security"
+                  d="M10,.375,20,4.854v6.667a13.8,13.8,0,0,1-2.865,8.464A12.436,12.436,0,0,1,10,24.854a12.439,12.439,0,0,1-7.135-4.87A13.8,13.8,0,0,1,0,11.521V4.854Zm0,12.24V2.823L2.24,6.26v6.354H10v9.948a10.619,10.619,0,0,0,5.208-3.75,12.392,12.392,0,0,0,2.552-6.2Z"
+                  transform="translate(0 -0.375)"
+                  fill="#636262"
+                />
+              </svg>
+
+              Security
+            </a>
+          </div>
+        </div>
+        <div class="main-wrapper">
+          <div class="col-md-9 px-0 my-4 ml-4">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="v-pills-personalinfo">
+                <div class="card rounded-0 border-0">
+                  <div class="card-body">
+                    <h3 class="h4 mb-4">Basic info</h3>
+                    <div class="form-row py-3 align-items-center">
+                      <span class="col-2 personalinfo-label">PHOTO</span>
+                      <div class="col-8">
+                        <span class="text-dark"
+                          >A photo helps personalise your account</span
+                        >
+                      </div>
+                      <div class="col-2 text-right">
+                        <div class="setting-profile-photo">
+                          <img
+                            src="./assets/img/user-thumb.jpg"
+                            id="userUploadedImg"
+                            class="user-upload-img"
+                            alt="User"
+                          />
+                          <span class="d-block text-center camera-icon-span">
+                            <img
+                              src="./assets/img/camera.svg"
+                              class="camera-icon"
+                              alt="Camera"
+                            />
+                          </span>
+                          <input type="file" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row py-3 border-top">
+                      <span class="col-2 personalinfo-label">NAME</span>
+                      <div class="col-8">
+                        <span class="text-dark"></span>
+                      </div>
+                      <div class="col-2 text-right">
+                        <button class="btn">
+                          <span class="fas fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-row py-3 border-top">
+                      <span class="col-2 personalinfo-label">BIRTHDAY</span>
+                      <div class="col-8">
+                        <span class="text-dark"></span>
+                      </div>
+                      <div class="col-2 text-right">
+                        <button class="btn">
+                          <span class="fas fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-row pt-3 pb-0 border-top">
+                      <span class="col-2 personalinfo-label">GENDER</span>
+                      <div class="col-8">
+                        <span class="text-dark"></span>
+                      </div>
+                      <div class="col-2 text-right">
+                        <button class="btn">
+                          <span class="fas fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card rounded-0 border-0 mt-4">
+                  <div class="card-body">
+                    <h3 class="h4 mb-4">Contact info</h3>
+
+                    <div class="form-row py-3">
+                      <span class="col-2 personalinfo-label">EMAIL</span>
+                      <div class="col-8">
+                        <span class="text-dark">Football-Fanatics.co </span>
+                      </div>
+                      <div class="col-2 text-right">
+                        <button class="btn">
+                          <span class="fas fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-row pt-3 pb-0 border-top">
+                      <span class="col-2 personalinfo-label">PHONE</span>
+                      <div class="col-8">
+                        <span class="text-dark">0777777777</span>
+                      </div>
+                      <div class="col-2 text-right">
+                        <button class="btn">
+                          <span class="fas fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-security">
+                <div class="card rounded-0 border-0">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-7">
+                        <h3 class="h4 mb-4">Signing in to Fanatics</h3>
+                      </div>
+                      <div class="col-5">
+                        <img
+                          src="./assets/img/signinginto-img.png"
+                          alt="Signing into Fanatics"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-row mt-1 pt-3 pb-0">
+                      <span class="col-6 personalinfo-label">Password</span>
+                      <div class="col-6">
+                        <div class="form-row">
+                          <div class="col-10">
+                            <span class="text-dark"
+                              >Last changed on 28 Dec 2019</span
+                            >
+                          </div>
+                          <div class="col-2 text-right">
+                            <button class="btn">
+                              <span class="fas fa-chevron-right"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card rounded-0 border-0 mt-4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-7">
+                        <h3 class="h4 mb-1">
+                          Ways that we can verify it's you
+                        </h3>
+                        <p class="mb-3">
+                          These can be used to make sure that it's really you
+                          signing in or to contact you if there's suspicious
+                          activity in your account
+                        </p>
+                      </div>
+                      <div class="col-5">
+                        <img
+                          src="./assets/img/setting-verify-img.png"
+                          alt="Signing into Fanatics"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-row py-3">
+                      <span class="col-2 personalinfo-label"
+                        >Recovery phone</span
+                      >
+                      <div class="col-8">
+                        <span class="text-dark"></span>
+                      </div>
+                      <div class="col-2 text-right">
+                        <button class="btn">
+                          <span class="fas fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-row pt-3 pb-0 border-top">
+                      <span class="col-2 personalinfo-label"
+                        >Recovery email</span
+                      >
+                      <div class="col-8">
+                        <span class="text-dark"></span>
+                      </div>
+                      <div class="col-2 text-right">
+                        <button class="btn">
+                          <span class="fas fa-chevron-right"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assets/js/script.js"></script>
+
+    <!-- <script src="./assets/js/dashboard.js"></script> -->
+    <script src="./assets/js/settings.js"></script>
+  </body>
+</html>
