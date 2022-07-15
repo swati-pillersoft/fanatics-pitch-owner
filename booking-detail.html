@@ -1291,19 +1291,91 @@ What makes your place unique? What can players expect</textarea
                 <p class="venue-para-name-two">Last step to go live</p>
 
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-12">
                     <div class="venue-form-card">
                       <div class="card venue-card">
-                        <div class="card-body venue-card-body qr-card-body">
+                        <!-- <div class="card-body venue-card-body qr-card-body">
                           <img
                             src="./assets/img/qr-final.png"
                             alt="qr"
                             class="qr-img"
                           />
+                        </div> -->
+                        <div class="card-body venue-card-body">
+                          <form>
+                            <div class="form-row">
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <label for="ownername"
+                                    >Full name of Owner</label
+                                  >
+                                  <input
+                                    type="text"
+                                    id="ownername"
+                                    class="form-control"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <label
+                                    >Proof of venue's ownership(upload doc/live
+                                    camera)</label
+                                  >
+                                  <div class="custom-file">
+                                    <input
+                                      type="file"
+                                      class="custom-file-input"
+                                      id="proofofownership"
+                                      accept="image/*"
+                                      capture
+                                    />
+                                    <label
+                                      class="custom-file-label"
+                                      for="proofofownership"
+                                      >Choose file</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <label for="representFullname"
+                                    >Full name if someone else represents the
+                                    Owner</label
+                                  >
+                                  <input
+                                    type="text"
+                                    id="representFullname"
+                                    class="form-control"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-group">
+                                  <label>ID (upload/live camera)</label>
+                                  <div class="custom-file">
+                                    <input
+                                      type="file"
+                                      class="custom-file-input"
+                                      id="ownerId"
+                                      accept="image/*"
+                                      capture
+                                    />
+                                    <label
+                                      class="custom-file-label"
+                                      for="ownerId"
+                                      >Choose file</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
                       <div class="card venue-card mt-2">
-                        <div class="card-body venue-card-body">
+                        <div class="card-body venue-card-body min-h-0">
                           <div class="form-row">
                             <div class="form-group col-12">
                               <div class="custom-control custom-checkbox">
