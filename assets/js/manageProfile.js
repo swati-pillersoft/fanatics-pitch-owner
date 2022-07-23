@@ -1,25 +1,25 @@
 $(document).ready(function () {
   let manageProfileInterval = setInterval(() => {
-    if ($("#profileCardBtn").length > 0) {
+    if ($("#profileCard").length > 0) {
       clearInterval(manageProfileInterval);
-      document.querySelectorAll("#profileCardBtn").forEach((btn) => {
+      document.querySelectorAll("#profileCard").forEach((btn) => {
         btn.addEventListener("click", function (e) {
           console.log(e.target);
           $(".manageProfilemain-content-wrapper").fadeOut(700);
           setTimeout(() => {
             $(".profileComplete-content-wrapper").fadeIn(700);
           }, 700);
-          if ($(e.target).hasClass("profileCardBtn1")) {
-            $(".manage-details-img").attr(
-              "src",
-              "./assets/img/manageProfile-card1.png"
-            );
-          } else if ($(e.target).hasClass("profileCardBtn2")) {
-            $(".manage-details-img").attr(
-              "src",
-              "./assets/img/manageProfile2.png"
-            );
-          }
+          // if ($(e.target).hasClass("profileCardBtn1")) {
+          //   $(".manage-details-img").attr(
+          //     "src",
+          //     "./assets/img/manageProfile-card1.png"
+          //   );
+          // } else if ($(e.target).hasClass("profileCardBtn2")) {
+          //   $(".manage-details-img").attr(
+          //     "src",
+          //     "./assets/img/manageProfile2.png"
+          //   );
+          // }
         });
       });
       // $("#profileCardBtn").click(function () {

@@ -53,6 +53,7 @@
   border-radius: 0;
   margin: 15px 0;
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  cursor: pointer;
 }
 
 .manage-card .card-body {

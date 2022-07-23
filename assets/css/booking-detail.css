@@ -303,3 +303,67 @@ section#step1 {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+@media (max-width: 991px) {
+  .navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+@media (max-width: 767px) {
+  .booking-details > section > .container > .row > .col-md-10 {
+    order: 2;
+  }
+
+  .indicator-section {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .indicator-left {
+    display: flex;
+    order: 2;
+  }
+
+  .custom-indicator {
+    width: 40px;
+    height: 5px;
+    background: #c0c2c5;
+    display: block;
+    margin: 0 3px;
+  }
+
+  .indicator-right {
+    margin-left: 0;
+  }
+
+  .booking-details .divider {
+    display: none;
+  }
+
+  div[id^="pitchFormRow"] {
+    border-bottom: 1px solid #00508b38;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  div[id^="pitchFormRow"]:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .booking-details section {
+    height: 90vh;
+    overflow-y: auto;
+  }
+
+  #step11 .btn.btn-step-back {
+    width: 300px;
+  }
+}

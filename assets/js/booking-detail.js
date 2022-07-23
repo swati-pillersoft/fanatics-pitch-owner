@@ -25,8 +25,8 @@ function updateRows(ogCount, currentCount) {
     var ctr = currentCount - ogCount;
     for (var i = 1; i <= ctr; i++) {
       var template = `<div class="form-row" id="pitchFormRow${ogCount + i}">
-        <div class="form-group col-2">
-          <label for="typeofpitch${ogCount + i}" class="sr-only"
+        <div class="form-group col-6 col-lg-2">
+          <label for="typeofpitch${ogCount + i}" class="d-inline d-lg-none"
             >Type of pitch</label
           >
           <select
@@ -38,8 +38,8 @@ function updateRows(ogCount, currentCount) {
             <option value="4-a-side">4-a-side</option>
           </select>
         </div>
-        <div class="form-group col-2">
-          <label for="indoor${ogCount + i}" class="sr-only"
+        <div class="form-group col-6 col-lg-2">
+          <label for="indoor${ogCount + i}" class="d-inline d-lg-none"
             >Indoor/Outdoor</label
           >
           <select
@@ -50,8 +50,8 @@ function updateRows(ogCount, currentCount) {
             <option value="Outdoor">Outdoor</option>
           </select>
         </div>
-        <div class="form-group col-2">
-          <label for="groundType${ogCount + i}" class="sr-only"
+        <div class="form-group col-6 col-lg-2">
+          <label for="groundType${ogCount + i}" class="d-inline d-lg-none"
             >Type of ground</label
           >
           <select
@@ -64,8 +64,8 @@ function updateRows(ogCount, currentCount) {
             <option value="natural grass">natural grass</option>
           </select>
         </div>
-        <div class="form-group col-6">
-          <label for="pitchname${ogCount + i}" class="sr-only"
+        <div class="form-group col-6 col-lg-6">
+          <label for="pitchname${ogCount + i}" class="d-inline d-lg-none"
             >Name of pitch</label
           >
           <input
