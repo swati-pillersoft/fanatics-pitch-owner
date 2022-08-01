@@ -59,3 +59,11 @@ $(".setting-profile-photo input").change(function (e) {
     $("#userUploadedImg").attr("src", newImgUrl);
   }
 });
+
+document.querySelectorAll(".toggle-password").forEach(function (togglePwd) {
+  togglePwd.addEventListener("click", function () {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    var type = $(this).hasClass("fa-eye-slash") ? "text" : "password";
+    $(this).prev().attr("type", type);
+  });
+});

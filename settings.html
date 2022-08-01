@@ -43,7 +43,7 @@
     <header>
       <nav class="navbar navbar-expand navbar-dark fanatic-nav">
         <a class="navbar-brand" href="./index.html"
-          ><img src="./assets/img/logo-blue.png" alt="PriceUp"
+          ><img src="./assets/img/logo-blue.png" alt="Fanatics"
         /></a>
         <button
           class="navbar-toggler"
@@ -149,9 +149,24 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="profileDropdownBtn">
                 <span class="dropdown-menu-arrow"></span>
-                <a class="dropdown-item" href="./booking-detail.html">Home</a>
+                <a
+                  class="dropdown-item"
+                  href="javascript:void(0)"
+                  onclick="history.back()"
+                  >Home</a
+                >
 
-                <a class="dropdown-item" href="./settings.html">Setting</a>
+                <a href="./change-password.html" class="dropdown-item"
+                  >Change Password</a
+                >
+                <a href="#" class="dropdown-item"
+                  >Notifications
+                  <!-- Rounded switch -->
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </a>
                 <a class="dropdown-item" href="./signin.html">Logout</a>
 
                 <!--<a class="dropdown-item" href="#" id="settingsDropdownBtn"
@@ -237,20 +252,39 @@
           </div>
         </div>
         <div class="main-wrapper">
-          <div class="col-md-9 px-0 my-4 ml-4">
+          <div class="col-md-9 px-md-0 my-4 ml-md-4">
+            <div class="top-row d-md-none mb-3">
+              <div class="main-toggle-div d-inline-block">
+                <button
+                  class="toggle-btn p-0 border-0 bg-transparent m-0"
+                  data-toggle="collapse"
+                  data-target="#dashboard-sidebar"
+                  aria-expanded="true"
+                  aria-controls="dashboard-sidebar"
+                >
+                  <a href="#">
+                    <img
+                      src="./assets/img/toggle-btn.png"
+                      alt="img"
+                      class="toggle-img"
+                    />
+                  </a>
+                </button>
+              </div>
+            </div>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="v-pills-personalinfo">
                 <div class="card rounded-0 border-0">
                   <div class="card-body">
                     <h3 class="h4 mb-4">Basic info</h3>
                     <div class="form-row py-3 align-items-center">
-                      <span class="col-2 personalinfo-label">PHOTO</span>
+                      <span class="col-md-2 personalinfo-label">PHOTO</span>
                       <div class="col-8">
                         <span class="text-dark"
                           >A photo helps personalise your account</span
                         >
                       </div>
-                      <div class="col-2 text-right">
+                      <div class="col-4 col-md-2 text-right">
                         <div class="setting-profile-photo">
                           <img
                             src="./assets/img/user-thumb.jpg"
@@ -270,8 +304,8 @@
                       </div>
                     </div>
                     <div class="form-row py-3 border-top">
-                      <span class="col-2 personalinfo-label">NAME</span>
-                      <div class="col-8">
+                      <span class="col-4 personalinfo-label">NAME</span>
+                      <div class="col-6">
                         <span class="text-dark"></span>
                       </div>
                       <div class="col-2 text-right">
@@ -281,8 +315,8 @@
                       </div>
                     </div>
                     <div class="form-row py-3 border-top">
-                      <span class="col-2 personalinfo-label">BIRTHDAY</span>
-                      <div class="col-8">
+                      <span class="col-4 personalinfo-label">BIRTHDAY</span>
+                      <div class="col-6">
                         <span class="text-dark"></span>
                       </div>
                       <div class="col-2 text-right">
@@ -292,8 +326,8 @@
                       </div>
                     </div>
                     <div class="form-row pt-3 pb-0 border-top">
-                      <span class="col-2 personalinfo-label">GENDER</span>
-                      <div class="col-8">
+                      <span class="col-4 personalinfo-label">GENDER</span>
+                      <div class="col-6">
                         <span class="text-dark"></span>
                       </div>
                       <div class="col-2 text-right">
@@ -308,7 +342,7 @@
                   <div class="card-body">
                     <h3 class="h4 mb-4">Contact info</h3>
 
-                    <div class="form-row py-3">
+                    <div class="form-row align-items-center py-3">
                       <span class="col-2 personalinfo-label">EMAIL</span>
                       <div class="col-8">
                         <span class="text-dark">Football-Fanatics.co </span>
@@ -319,7 +353,9 @@
                         </button>
                       </div>
                     </div>
-                    <div class="form-row pt-3 pb-0 border-top">
+                    <div
+                      class="form-row align-items-center pt-3 pb-0 border-top"
+                    >
                       <span class="col-2 personalinfo-label">PHONE</span>
                       <div class="col-8">
                         <span class="text-dark">0777777777</span>
@@ -338,10 +374,10 @@
                 <div class="card rounded-0 border-0">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-7">
+                      <div class="col-md-7">
                         <h3 class="h4 mb-4">Signing in to Fanatics</h3>
                       </div>
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <img
                           src="./assets/img/signinginto-img.png"
                           alt="Signing into Fanatics"
@@ -351,9 +387,11 @@
                     </div>
 
                     <div class="form-row mt-1 pt-3 pb-0">
-                      <span class="col-6 personalinfo-label">Password</span>
-                      <div class="col-6">
-                        <div class="form-row">
+                      <span class="col-3 col-md-6 personalinfo-label"
+                        >Password</span
+                      >
+                      <div class="col-9 col-md-6">
+                        <div class="form-row align-items-center">
                           <div class="col-10">
                             <span class="text-dark"
                               >Last changed on 28 Dec 2019</span
@@ -372,7 +410,7 @@
                 <div class="card rounded-0 border-0 mt-4">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-7">
+                      <div class="col-md-7">
                         <h3 class="h4 mb-1">
                           Ways that we can verify it's you
                         </h3>
@@ -382,7 +420,7 @@
                           activity in your account
                         </p>
                       </div>
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <img
                           src="./assets/img/setting-verify-img.png"
                           alt="Signing into Fanatics"
@@ -392,10 +430,10 @@
                     </div>
 
                     <div class="form-row py-3">
-                      <span class="col-2 personalinfo-label"
+                      <span class="col-4 col-md-2 personalinfo-label"
                         >Recovery phone</span
                       >
-                      <div class="col-8">
+                      <div class="col-6 col-md-8">
                         <span class="text-dark"></span>
                       </div>
                       <div class="col-2 text-right">
@@ -405,10 +443,10 @@
                       </div>
                     </div>
                     <div class="form-row pt-3 pb-0 border-top">
-                      <span class="col-2 personalinfo-label"
+                      <span class="col-4 col-md-2 personalinfo-label"
                         >Recovery email</span
                       >
-                      <div class="col-8">
+                      <div class="col-6 col-md-8">
                         <span class="text-dark"></span>
                       </div>
                       <div class="col-2 text-right">
