@@ -27,6 +27,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+      integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/dashboard.css" />
     <link rel="stylesheet" href="./assets/css/settings.css" />
@@ -280,9 +287,11 @@
                     <div class="form-row py-3 align-items-center">
                       <span class="col-md-2 personalinfo-label">PHOTO</span>
                       <div class="col-8">
-                        <span class="text-dark"
-                          >A photo helps personalise your account</span
-                        >
+                        <input
+                          class="text-dark form-control border-0 bg-transparent"
+                          value="A photo helps personalise your account"
+                          readonly
+                        />
                       </div>
                       <div class="col-4 col-md-2 text-right">
                         <div class="setting-profile-photo">
@@ -303,69 +312,98 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-row py-3 border-top">
-                      <span class="col-4 personalinfo-label">NAME</span>
-                      <div class="col-6">
-                        <span class="text-dark"></span>
+                    <label class="form-row py-3 border-top mb-0">
+                      <span class="col-4 col-md-2 personalinfo-label"
+                        >NAME</span
+                      >
+                      <div class="col-6 col-md-8">
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          id="name"
+                        />
                       </div>
                       <div class="col-2 text-right">
-                        <button class="btn">
+                        <span class="btn">
                           <span class="fas fa-chevron-right"></span>
-                        </button>
+                        </span>
                       </div>
-                    </div>
-                    <div class="form-row py-3 border-top">
-                      <span class="col-4 personalinfo-label">BIRTHDAY</span>
-                      <div class="col-6">
-                        <span class="text-dark"></span>
+                    </label>
+                    <label class="form-row py-3 border-top mb-0">
+                      <span class="col-4 col-md-2 personalinfo-label"
+                        >BIRTHDAY</span
+                      >
+                      <div class="col-6 col-md-8">
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          id="birthday"
+                        />
                       </div>
                       <div class="col-2 text-right">
-                        <button class="btn">
+                        <span class="btn">
                           <span class="fas fa-chevron-right"></span>
-                        </button>
+                        </span>
                       </div>
-                    </div>
-                    <div class="form-row pt-3 pb-0 border-top">
-                      <span class="col-4 personalinfo-label">GENDER</span>
-                      <div class="col-6">
-                        <span class="text-dark"></span>
+                    </label>
+                    <label class="form-row pt-3 pb-0 border-top mb-0">
+                      <span class="col-4 col-md-2 personalinfo-label"
+                        >GENDER</span
+                      >
+                      <div class="col-6 col-md-8">
+                        <select
+                          id="gender"
+                          class="custom-select border-0"
+                          style="background-image: none"
+                        >
+                          <option value="" selected hidden></option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
                       </div>
                       <div class="col-2 text-right">
-                        <button class="btn">
+                        <span class="btn">
                           <span class="fas fa-chevron-right"></span>
-                        </button>
+                        </span>
                       </div>
-                    </div>
+                    </label>
                   </div>
                 </div>
                 <div class="card rounded-0 border-0 mt-4">
                   <div class="card-body">
                     <h3 class="h4 mb-4">Contact info</h3>
 
-                    <div class="form-row align-items-center py-3">
+                    <label class="form-row align-items-center py-3 mb-0">
                       <span class="col-2 personalinfo-label">EMAIL</span>
                       <div class="col-8">
-                        <span class="text-dark">Football-Fanatics.co </span>
+                        <input
+                          class="text-dark form-control border-0 bg-transparent"
+                          value="Football-Fanatics.co"
+                        />
                       </div>
                       <div class="col-2 text-right">
-                        <button class="btn">
+                        <span class="btn">
                           <span class="fas fa-chevron-right"></span>
-                        </button>
+                        </span>
                       </div>
-                    </div>
-                    <div
-                      class="form-row align-items-center pt-3 pb-0 border-top"
+                    </label>
+                    <label
+                      class="form-row align-items-center pt-3 pb-0 border-top mb-0"
                     >
                       <span class="col-2 personalinfo-label">PHONE</span>
                       <div class="col-8">
-                        <span class="text-dark">0777777777</span>
+                        <input
+                          class="text-dark form-control border-0 bg-transparent"
+                          value="0777777777"
+                        />
                       </div>
                       <div class="col-2 text-right">
-                        <button class="btn">
+                        <span class="btn">
                           <span class="fas fa-chevron-right"></span>
-                        </button>
+                        </span>
                       </div>
-                    </div>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -386,25 +424,39 @@
                       </div>
                     </div>
 
-                    <div class="form-row mt-1 pt-3 pb-0">
-                      <span class="col-3 col-md-6 personalinfo-label"
+                    <label class="form-row mt-1 pt-3 pb-0 mb-0 password-group">
+                      <span class="col-3 col-md-2 personalinfo-label"
                         >Password</span
                       >
-                      <div class="col-9 col-md-6">
-                        <div class="form-row align-items-center">
+                      <div class="col-md-5">
+                        <div class="position-relative">
+                          <input
+                            type="password"
+                            class="text-dark form-control border-0 bg-transparent"
+                            value="123456789"
+                          />
+                          <span
+                            id="toggle_pwd"
+                            class="toggle-password fas fa-eye"
+                          ></span>
+                        </div>
+                      </div>
+                      <div class="col-md-1"></div>
+                      <div class="col-9 col-md-4 d-flex align-items-center">
+                        <div class="form-row align-items-center flex-grow-1">
                           <div class="col-10">
                             <span class="text-dark"
                               >Last changed on 28 Dec 2019</span
                             >
                           </div>
                           <div class="col-2 text-right">
-                            <button class="btn">
+                            <span class="btn">
                               <span class="fas fa-chevron-right"></span>
-                            </button>
+                            </span>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </label>
                   </div>
                 </div>
                 <div class="card rounded-0 border-0 mt-4">
@@ -429,32 +481,40 @@
                       </div>
                     </div>
 
-                    <div class="form-row py-3">
+                    <label class="form-row py-3 mb-0">
                       <span class="col-4 col-md-2 personalinfo-label"
                         >Recovery phone</span
                       >
                       <div class="col-6 col-md-8">
-                        <span class="text-dark"></span>
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          id="recoveryPhone"
+                        />
                       </div>
                       <div class="col-2 text-right">
-                        <button class="btn">
+                        <span class="btn">
                           <span class="fas fa-chevron-right"></span>
-                        </button>
+                        </span>
                       </div>
-                    </div>
-                    <div class="form-row pt-3 pb-0 border-top">
+                    </label>
+                    <label class="form-row pt-3 pb-0 mb-0 border-top">
                       <span class="col-4 col-md-2 personalinfo-label"
                         >Recovery email</span
                       >
                       <div class="col-6 col-md-8">
-                        <span class="text-dark"></span>
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          id="recoveryEmail"
+                        />
                       </div>
                       <div class="col-2 text-right">
-                        <button class="btn">
+                        <span class="btn">
                           <span class="fas fa-chevron-right"></span>
-                        </button>
+                        </span>
                       </div>
-                    </div>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -473,7 +533,16 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+      integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
     <script src="./assets/js/script.js"></script>
 
     <!-- <script src="./assets/js/dashboard.js"></script> -->

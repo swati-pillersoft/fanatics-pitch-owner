@@ -67,3 +67,5 @@ document.querySelectorAll(".toggle-password").forEach(function (togglePwd) {
     $(this).prev().attr("type", type);
   });
 });
+
+$("#birthday").datepicker({});

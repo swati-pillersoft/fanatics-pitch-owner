@@ -30,6 +30,7 @@
 .personalinfo-label {
   font-size: 14px;
   align-self: center;
+  margin-bottom: 0;
 }
 
 .card .h4 {
@@ -66,6 +67,14 @@
   left: 0;
   right: 0;
   opacity: 0;
+}
+
+.password-group .fas {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
