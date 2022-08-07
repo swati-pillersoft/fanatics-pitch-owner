@@ -588,6 +588,209 @@ var bookingCancelChart = new Chart(
 
 var timetableCalendar;
 let clickedStadium;
+let stadiumResourceId;
+let currentStadiumEvents;
+let allEvents = [
+  {
+    resourceId: "a",
+    title: "Booked",
+    start: moment("2022-06-19 00:00:00").toDate(),
+    end: moment("2022-06-19 01:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "a",
+    title: "Available",
+    start: moment("2022-06-19 01:00:00").toDate(),
+    end: moment("2022-06-19 07:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#CCD8EC",
+    borderColor: "#CCD8EC",
+    textColor: "#000000",
+    extendedProps: {
+      available: true,
+    },
+  },
+  {
+    resourceId: "b",
+    title: "Booked",
+    start: moment("2022-06-20 04:00:00").toDate(),
+    end: moment("2022-06-20 05:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "b",
+    title: "Available",
+    start: moment("2022-06-21 00:00:00").toDate(),
+    end: moment("2022-06-21 03:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#CCD8EC",
+    borderColor: "#CCD8EC",
+    textColor: "#000000",
+    extendedProps: {
+      available: true,
+    },
+  },
+  {
+    resourceId: "c",
+    title: "Booked",
+    start: moment("2022-06-22 00:00:00").toDate(),
+    end: moment("2022-06-22 02:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "c",
+    title: "Available",
+    start: moment("2022-06-22 03:00:00").toDate(),
+    end: moment("2022-06-22 07:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#CCD8EC",
+    borderColor: "#CCD8EC",
+    textColor: "#000000",
+    extendedProps: {
+      available: true,
+    },
+  },
+  {
+    resourceId: "d",
+    title: "Booked",
+    start: moment("2022-06-25 05:00:00").toDate(),
+    end: moment("2022-06-25 06:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "d",
+    title: "Available",
+    start: moment("2022-06-25 00:00:00").toDate(),
+    end: moment("2022-06-25 04:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#CCD8EC",
+    borderColor: "#CCD8EC",
+    textColor: "#000000",
+    extendedProps: {
+      available: true,
+    },
+  },
+  {
+    resourceId: "b",
+    title: "Booked",
+    start: moment("2022-06-24 03:00:00").toDate(),
+    end: moment("2022-06-24 04:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "e",
+    title: "Booked",
+    start: moment("2022-06-20 09:00:00").toDate(),
+    end: moment("2022-06-20 10:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "e",
+    title: "Booked",
+    start: moment("2022-06-22 10:00:00").toDate(),
+    end: moment("2022-06-22 15:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "a",
+    title: "Booked",
+    start: moment("2022-06-23 14:00:00").toDate(),
+    end: moment("2022-06-23 16:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "b",
+    title: "Booked",
+    start: moment("2022-06-23 14:00:00").toDate(),
+    end: moment("2022-06-23 16:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "a",
+    title: "Booked",
+    start: moment("2022-06-23 00:00:00").toDate(),
+    end: moment("2022-06-23 02:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "e",
+    title: "Booked",
+    start: moment("2022-06-25 11:00:00").toDate(),
+    end: moment("2022-06-25 14:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+  {
+    resourceId: "f",
+    title: "Available",
+    start: moment("2022-06-20 11:00:00").toDate(),
+    end: moment("2022-06-20 17:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#CCD8EC",
+    borderColor: "#CCD8EC",
+    textColor: "#000000",
+    extendedProps: {
+      available: true,
+    },
+  },
+  {
+    resourceId: "f",
+    title: "Available",
+    start: moment("2022-06-24 07:00:00").toDate(),
+    end: moment("2022-06-24 12:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#CCD8EC",
+    borderColor: "#CCD8EC",
+    textColor: "#000000",
+    extendedProps: {
+      available: true,
+    },
+  },
+  {
+    resourceId: "e",
+    title: "Booked",
+    start: moment("2022-06-23 08:00:00").toDate(),
+    end: moment("2022-06-23 10:00:00").toDate(),
+    display: "block",
+    backgroundColor: "#C84347",
+    borderColor: "#C84347",
+    textColor: "#ffffff",
+  },
+];
+
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("timetableCalendar");
   timetableCalendar = new FullCalendar.Calendar(calendarEl, {
@@ -638,6 +841,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log(viewName);
       $(".fc-resource").click(function (e) {
+        stadiumResourceId = $(this).data("resource-id");
         clickedStadium = e.target.innerText;
         timetableCalendar.changeView("timeGridWeek");
         $(".fc-toolbar-title").html(clickedStadium);
@@ -646,8 +850,31 @@ document.addEventListener("DOMContentLoaded", function () {
     datesSet: function (dateInfo) {
       if (dateInfo.view.type === "timeGridWeek") {
         $(".fc-toolbar-title").html(clickedStadium);
+        console.log("stadiumResourceId:", stadiumResourceId);
+        var clickedResource =
+          timetableCalendar.getResourceById(stadiumResourceId);
+        console.log("clickedResource:", clickedResource);
+        currentStadiumEvents = clickedResource.getEvents();
+        console.log("currentStadiumEvents:", currentStadiumEvents);
+        var allCurrentEvents = timetableCalendar.getEvents();
+        allCurrentEvents.forEach((event) => {
+          event.remove();
+        });
+        currentStadiumEvents.forEach((event) => {
+          timetableCalendar.addEvent(event);
+        });
+        console.log("stadium specific events loaded");
       } else {
         $(".fc-toolbar-title").html(dateInfo.view.title);
+        var allCurrentEvents = timetableCalendar.getEvents();
+        allCurrentEvents.forEach((event) => {
+          event.remove();
+        });
+        allEvents.forEach((event) => {
+          timetableCalendar.addEvent(event);
+        });
+        console.log("allEvents:", allEvents);
+        console.log("All global events loaded");
       }
     },
     eventContent: function ({ event }) {
@@ -662,17 +889,8 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     },
     customButtons: {
-      // stadium: {
-      //   text: "Stadium",
-      //   click: function () {
-      //     calendar.changeView('resourceTimeGridDay')
-      //   },
-      // },
       availableLegend: {
         text: "Available",
-        // click: function() {
-        //   alert('clicked the custom button!');
-        // }
       },
       bookedLegend: {
         text: "Booked",
@@ -687,12 +905,6 @@ document.addEventListener("DOMContentLoaded", function () {
         buttonText: "Today",
         // name of view
         titleFormat: { month: "long", year: "numeric" },
-        // dayHeaderFormat: {
-        //   weekday: "short",
-        //   day: "numeric",
-        //   month: "long",
-        //   omitCommas: true,
-        // },
         allDayContent: (text) => {
           return "Date";
         },
@@ -708,226 +920,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // other view-specific options here
       },
     },
-    events: [
-      {
-        resourceId: "a",
-        title: "Booked",
-        start: moment("2022-06-19 00:00:00").toDate(),
-        end: moment("2022-06-19 01:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Available",
-        start: moment("2022-06-19 01:00:00").toDate(),
-        end: moment("2022-06-19 07:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#CCD8EC",
-        borderColor: "#CCD8EC",
-        textColor: "#000000",
-        extendedProps: {
-          available: true,
-        },
-      },
-      {
-        title: "Booked",
-        start: moment("2022-06-20 04:00:00").toDate(),
-        end: moment("2022-06-20 05:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Available",
-        start: moment("2022-06-20 00:00:00").toDate(),
-        end: moment("2022-06-20 03:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#CCD8EC",
-        borderColor: "#CCD8EC",
-        textColor: "#000000",
-        extendedProps: {
-          available: true,
-        },
-      },
-      {
-        title: "Booked",
-        start: moment("2022-06-22 00:00:00").toDate(),
-        end: moment("2022-06-22 02:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Available",
-        start: moment("2022-06-22 03:00:00").toDate(),
-        end: moment("2022-06-22 07:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#CCD8EC",
-        borderColor: "#CCD8EC",
-        textColor: "#000000",
-        extendedProps: {
-          available: true,
-        },
-      },
-      {
-        title: "Booked",
-        start: moment("2022-06-25 05:00:00").toDate(),
-        end: moment("2022-06-25 06:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Available",
-        start: moment("2022-06-25 00:00:00").toDate(),
-        end: moment("2022-06-25 04:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#CCD8EC",
-        borderColor: "#CCD8EC",
-        textColor: "#000000",
-        extendedProps: {
-          available: true,
-        },
-      },
-      {
-        title: "Booked",
-        start: moment("2022-06-24 03:00:00").toDate(),
-        end: moment("2022-06-24 04:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Booked",
-        start: moment("2022-06-20 09:00:00").toDate(),
-        end: moment("2022-06-20 10:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Booked",
-        start: moment("2022-06-22 10:00:00").toDate(),
-        end: moment("2022-06-22 15:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        resourceId: "a",
-        title: "Booked",
-        start: moment("2022-06-23 14:00:00").toDate(),
-        end: moment("2022-06-23 16:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        resourceId: "b",
-        title: "Booked",
-        start: moment("2022-06-23 14:00:00").toDate(),
-        end: moment("2022-06-23 16:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        resourceId: "a",
-        title: "Booked",
-        start: moment("2022-06-23 00:00:00").toDate(),
-        end: moment("2022-06-23 02:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Booked",
-        start: moment("2022-06-25 11:00:00").toDate(),
-        end: moment("2022-06-25 14:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-      {
-        title: "Available",
-        start: moment("2022-06-20 11:00:00").toDate(),
-        end: moment("2022-06-20 17:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#CCD8EC",
-        borderColor: "#CCD8EC",
-        textColor: "#000000",
-        extendedProps: {
-          available: true,
-        },
-      },
-      {
-        title: "Available",
-        start: moment("2022-06-24 07:00:00").toDate(),
-        end: moment("2022-06-24 12:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#CCD8EC",
-        borderColor: "#CCD8EC",
-        textColor: "#000000",
-        extendedProps: {
-          available: true,
-        },
-      },
-      // {
-      //   resourceId: "c",
-      //   title: "Available",
-      //   start: moment("2022-06-23 03:00:00").toDate(),
-      //   end: moment("2022-06-23 07:00:00").toDate(),
-      //   display: "block",
-      //   backgroundColor: "#CCD8EC",
-      //   borderColor: "#CCD8EC",
-      //   textColor: "#000000",
-      //   extendedProps: {
-      //     available: true,
-      //   },
-      // },
-      {
-        resourceId: "e",
-        title: "Booked",
-        start: moment("2022-06-23 08:00:00").toDate(),
-        end: moment("2022-06-23 10:00:00").toDate(),
-        display: "block",
-        backgroundColor: "#C84347",
-        borderColor: "#C84347",
-        textColor: "#ffffff",
-      },
-    ],
+    events: allEvents,
   });
   timetableCalendar.render();
-  // document
-  //   .querySelectorAll("#timetableDatepicker")
-  //   .forEach(function (timetableDatepicker) {
-  //     $("#timetableDatepicker")
-  //       .datepicker({
-  //         autoclose: true,
-  //         format: "M, dd yyyy",
-  //         templates: {
-  //           leftArrow: '<i class="fas fa-chevron-left"></i>',
-  //           rightArrow: '<i class="fas fa-chevron-right"></i>',
-  //         },
-  //       })
-  //       .datepicker("setDate", "now")
-  //       .on("changeDate", function (e) {
-  //         let date = e.date;
-  //         timetableCalendar.gotoDate(date);
-  //       });
-  //   });
 
   setTimeout(() => {
     $("#btn-toggle-calendar").click(function () {
