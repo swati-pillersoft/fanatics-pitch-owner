@@ -845,12 +845,6 @@ document.addEventListener("DOMContentLoaded", function () {
         clickedStadium = e.target.innerText;
         timetableCalendar.changeView("timeGridWeek");
         $(".fc-toolbar-title").html(clickedStadium);
-      });
-    },
-    datesSet: function (dateInfo) {
-      if (dateInfo.view.type === "timeGridWeek") {
-        $(".fc-toolbar-title").html(clickedStadium);
-        console.log("stadiumResourceId:", stadiumResourceId);
         var clickedResource =
           timetableCalendar.getResourceById(stadiumResourceId);
         console.log("clickedResource:", clickedResource);
@@ -864,6 +858,11 @@ document.addEventListener("DOMContentLoaded", function () {
           timetableCalendar.addEvent(event);
         });
         console.log("stadium specific events loaded");
+      });
+    },
+    datesSet: function (dateInfo) {
+      if (dateInfo.view.type === "timeGridWeek") {
+        console.log("stadiumResourceId:", stadiumResourceId);
       } else {
         $(".fc-toolbar-title").html(dateInfo.view.title);
         var allCurrentEvents = timetableCalendar.getEvents();
